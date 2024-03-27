@@ -1,0 +1,64 @@
+<!-- <h1>FARI AI TOTEM</h1>
+<div class="container">
+  <ng-container *ngFor="let message of messages">
+    <div
+      class="message"
+      [ngClass]="{
+        from: message.author === 'bot',
+        to: message.author === 'user'
+      }"
+    >
+      {{ message.content }}
+    </div>
+  </ng-container>
+
+  <input [(ngModel)]="value" (keydown.enter)="sendMessage()" type="text" />
+  <button #send id="send" (click)="sendMessage()">Send</button>
+  <button (click)="startListening()">Mic</button>
+  <br />
+</div> -->
+
+<div class="container">
+  <div class="chat-container">
+    <div class="user-message">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d88772f2b12b2bcb371de3b62a63704ed23466e4fda676ddaffba83b96adc17b?apiKey=90061d4af8ab4a37a1a91c0ba24a527f&"
+        class="user-avatar"
+        alt="User avatar"
+        (click)="startListening()"
+      />
+      <button #send id="send" style="visibility: hidden;" (click)="sendMessage()"></button>
+      <div class="message-container">
+       
+      <ng-container *ngFor="let message of messages">
+        <div
+          class="user-message-container"
+          *ngIf="message.author == 'user'; else botMessage"
+        >
+          <div class="user-message-bubble">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/02a9b4f6e0260047221163e6dc678e38029f1aff94fdbe92c0ba2b65494bf8e1?apiKey=90061d4af8ab4a37a1a91c0ba24a527f&"
+              class="user-message-background"
+              alt=""
+            />
+            <p class="user-message-text">{{ message.content }}</p>
+          </div>
+        </div>
+
+        <ng-template #botMessage>
+          <div class="bot-message">
+            <div class="bot-message-bubble">
+              {{ message.content }}
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </div>
+    </div>
+
+    <div class="button-container">
+      <button class="start-demo-button">Cancel</button>
+      <button class="start-demo-button" (click)="openDialog()">Start demo</button>
+    </div>
+  </div>
+</div>

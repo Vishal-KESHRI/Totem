@@ -1,0 +1,31 @@
+body {
+  /* Set the background color */
+  background-color: #2E4FBF; /* Light grey, as an example */
+
+  /* Ensure it covers the whole viewport */
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* Additional styles to prevent margin/padding discrepancies */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+    margin-right: 20px;
+  }
+  .button-active {
+    background-color: #9b4dca;
+    color: white;
+  }
+  .button-active:hover,
+  .button-active:focus {
+    background-color: #9b4dca;
+    border-color: #9b4dca;
+    color: #fff;
+  }
+  .top-bar {
+    margin: 25px 0;
+  }
+  

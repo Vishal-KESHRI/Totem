@@ -1,0 +1,4 @@
+mat-dialog-content {
+    color: #fff; /* Your desired font color */
+    background: var(--Fari-Primary, #183E91); /* Your desired background image */
+  }

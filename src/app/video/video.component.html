@@ -1,0 +1,5 @@
+<video #videoElement id="videoElement" width="480" height="320" autoplay></video>
+<canvas #canvasElement id="canvasElement" width="480" height="320" style="display: none;"></canvas>
+<button (click)="captureImage()">Capture</button>
+
+<img [src]="image" alt="Base64 Image"/>
